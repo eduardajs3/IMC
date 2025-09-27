@@ -53,7 +53,7 @@ export default function App() {
 
         <Button 
           title="CALCULAR" 
-          color="#a03f5f"  // cor marsala
+          color="#a03f5f" 
           onPress={calcularIMC} 
         />
 
@@ -73,15 +73,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f2e9e6',   // fundo neutro mais suave
+    backgroundColor: '#f2e9e6',   
     padding: 10,
   },
   app: {
     width: '90%',
-    backgroundColor: '#fffaf9',   // card levemente rosado
+    backgroundColor: '#fffaf9',  
     borderRadius: 20,
     borderWidth: 2,
-    borderColor: '#b76e79',       // marsala mais suave
+    borderColor: '#b76e79',       
     padding: 20,
     shadowColor: '#000',
     shadowOpacity: 0.05,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   titulo: {
     fontSize: 36,
-    color: '#a03f5f',             // marsala elegante e moderno
+    color: '#a03f5f',             
     fontWeight: 'bold',
     marginBottom: 30,
     textAlign: 'center',
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     paddingHorizontal: 15,
     borderWidth: 1,
-    borderColor: '#e0c7c7',      // borda suave rosada
+    borderColor: '#e0c7c7',     
     marginBottom: 20,
     shadowColor: '#000',
     shadowOpacity: 0.04,
@@ -116,19 +116,19 @@ const styles = StyleSheet.create({
   textos: {
     fontSize: 28,
     textAlign: 'center',
-    color: '#a03f5f',                // texto neutro escuro
+    color: '#a03f5f',               
     marginBottom: 15,
     fontWeight: '600',
   },
   apresentar: {
     marginTop: 30,
     padding: 20,
-    backgroundColor: '#fff',   // mesmo tom do card principal
+    backgroundColor: '#fff',   
     borderRadius: 20,
     width: '100%',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#e0c7c7',       // borda suave rosada
+    borderColor: '#e0c7c7',     
     shadowColor: '#000',
     shadowOpacity: 0.04,
     shadowOffset: { width: 0, height: 4 },
