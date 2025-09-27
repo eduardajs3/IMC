@@ -31,10 +31,10 @@ export default function App() {
   }
 
   return (
-    <View style={styles.app}>
-      <Text style={styles.titulo}>Calcule seu IMC</Text>
+    <View style={styles.container}>
+      <View style={styles.app}>
+        <Text style={styles.titulo}>Calcule seu IMC</Text>
 
-      <View>
         <TextInput
           style={styles.input}
           placeholder="Digite seu peso" 
@@ -42,9 +42,7 @@ export default function App() {
           value={peso}
           onChangeText={setPeso}
         />
-      </View>
 
-      <View>
         <TextInput
           style={styles.input}
           placeholder="Digite sua altura"
@@ -52,61 +50,89 @@ export default function App() {
           value={altura}
           onChangeText={setAltura}
         />
-      </View>
 
-      <Button style={styles.btn} title='CALCULAR' onPress={calcularIMC}> </Button>
-      <View style={styles.apresentar}>
-        <Text style={styles.textos}>Resultado: {resultado}</Text>
-        <Text style={styles.textos}>Diagnóstico: {diag}</Text>
+        <Button 
+          title="CALCULAR" 
+          color="#a03f5f"  // cor marsala
+          onPress={calcularIMC} 
+        />
+
+
+        <View style={styles.apresentar}>
+          <Text style={styles.textos}>Resultado: {resultado}</Text>
+          <Text style={styles.textos}>Diagnóstico: {diag}</Text>
+        </View>
       </View>
     </View>
+
   );
 }
 
 const styles = StyleSheet.create({
-  app: {
+  container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-    
-  
+    backgroundColor: '#f2e9e6',   // fundo neutro mais suave
+    padding: 10,
+  },
+  app: {
+    width: '90%',
+    backgroundColor: '#fffaf9',   // card levemente rosado
+    borderRadius: 20,
+    borderWidth: 2,
+    borderColor: '#b76e79',       // marsala mais suave
+    padding: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    elevation: 5,
   },
   titulo: {
-    fontSize: 34,
-    color: '#f7a29e',
+    fontSize: 36,
+    color: '#a03f5f',             // marsala elegante e moderno
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 30,
+    textAlign: 'center',
   },
   input: {
-    width: 300,
-    borderColor: 'black',
-    borderWidth: 2,
-    height: 50,
-    fontSize: 20,
-    marginBottom: 20,
-    paddingHorizontal: 10,
+    width: '100%',
+    height: 55,
+    fontSize: 18,
     backgroundColor: '#fff',
-    borderRadius: 5,
+    borderRadius: 12,
+    paddingHorizontal: 15,
+    borderWidth: 1,
+    borderColor: '#e0c7c7',      // borda suave rosada
+    marginBottom: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.04,
+    shadowOffset: { width: 0, height: 3 },
+    shadowRadius: 5,
+    elevation: 2,
   },
-  btn: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f7a29e',
-    height: 50,
-    width: 140,
-    borderRadius: 8,
-    marginTop: 20,
-  },
-  textos:{
-    fontSize: 30,
+  
+  textos: {
+    fontSize: 28,
     textAlign: 'center',
-
-
+    color: '#a03f5f',                // texto neutro escuro
+    marginBottom: 15,
+    fontWeight: '600',
   },
-  apresentar:{
-    Margin: 20,
-  }
+  apresentar: {
+    marginTop: 30,
+    padding: 20,
+    backgroundColor: '#fff',   // mesmo tom do card principal
+    borderRadius: 20,
+    width: '100%',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#e0c7c7',       // borda suave rosada
+    shadowColor: '#000',
+    shadowOpacity: 0.04,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 6,
+    elevation: 2,
+  },
 });
-
